@@ -19,18 +19,18 @@ module.exports = {
     themes: [
       {
         mytheme: {
-          "primary": "#003399",
-          "secondary": "#dce024",
-          "accent": "#99add6",
-          "neutral": "#586585",
-          "base-100": "#fff",
-          "info": "#5ca0d1",
-          "success": "#199473",
-          "warning": "#C07F07",
-          "error": "#F54260",
+          "primary": "#17429F",
+          "secondary": "#1d1d29",
+          "accent": "#f5dd3f",
+          "neutral": "#191D24",
+          "base-100": "#fafbfa",
+          "info": "#00b1fd",
+          "success": "#24e170",
+          "warning": "#FBBD23",
+          "error": "#F84C4C",
         },
       },
     ],
   },
   plugins: [require("daisyui")],
-}
+};
