@@ -5,7 +5,7 @@ import "../styles/globals.css";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <div className="p-5 fixed w-full z-50">
+      <div className="p-5 pb-0 backdrop-blur-md fixed w-full z-50">
         <Navbar />
       </div>
       <Component {...pageProps} />
