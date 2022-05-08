@@ -30,12 +30,8 @@ export default function Hero({ slides }) {
     window.addEventListener("focus", () => {
       startInterval();
     });
-
     startInterval();
   });
-
-
-
   return (
     <div className="hero w-100 min-h-screen bg-base-100">
       <div className="hero-content flex-col lg:flex-row-reverse lg:p-16">

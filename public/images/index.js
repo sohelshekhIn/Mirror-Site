@@ -12,5 +12,6 @@ import howusBasics from "./howus-basics.png"
 import howusGoals from "./howus-goals.png";
 import howusOlympiad from "./howus-olympiad.png";
 import howusTasklist from "./howus-tasklist.png";
+import testimonial from "./testimonial.jpg";
 
-export { h1, h2, h3, h4, h5, h6, h7, h8, h9, logo, howusBasics, howusGoals, howusOlympiad, howusTasklist };
+export { h1, h2, h3, h4, h5, h6, h7, h8, h9, logo, howusBasics, howusGoals, howusOlympiad, howusTasklist, testimonial };

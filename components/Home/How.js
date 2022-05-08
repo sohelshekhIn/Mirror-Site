@@ -18,7 +18,7 @@ export default function HowUs() {
                     <p className="my-3 font-medium">We always Support and Stand with every child to achieve his/her dream.</p>
                 </span>
             </div>
-            <div className="w-full p-5 lg:w-3/4 mx-auto flex lg:flex-row-reverse flex-col">
+            <div className="w-full p-5 lg:w-3/4 mx-auto flex lg:flex-row-reverse flex-col lg:mt-10">
                 <span className="my-auto lg:w-5/12 p-14">
                     <Image src={howusBasics} alt="How" />
                 </span>
@@ -30,8 +30,8 @@ export default function HowUs() {
                     <p className="my-3 font-medium">Weekly Presentation for developing Speaking Skills.</p>
                 </span>
             </div>
-            <div className="w-full p-5 lg:w-3/4 mx-auto flex flex-col lg:flex-row">
-                <span className="lg:-mt-16 lg:w-5/12 p-10">
+            <div className="w-full p-5 lg:w-3/4 mx-auto flex flex-col lg:flex-row 2xl:-mt-5">
+                <span className="2xl:-mt-16 lg:w-5/12 p-10">
                     <Image src={howusTasklist} alt="How" />
                 </span>
                 <span className="lg:w-6/12">
@@ -43,7 +43,7 @@ export default function HowUs() {
                 </span>
             </div>
             <div className="w-full p-5 lg:w-3/4 mx-auto flex lg:flex-row-reverse flex-col">
-                <span className="lg:-mt-24 lg:w-5/12 p-10">
+                <span className="2xl:-mt-24 lg:w-5/12 p-10">
                     <Image src={howusOlympiad} alt="How" />
                 </span>
                 <span className="lg:w-6/12">
