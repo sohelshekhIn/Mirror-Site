@@ -43,8 +43,8 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="my-1">
-              <Link href="/student-enquiry">
-                <a className="w-full p-4">Student Enquiry</a>
+              <Link href="/Admission-Enquiry">
+                <a className="w-full p-4">Admission Enquiry</a>
               </Link>
             </li>
             <li className="my-1">
@@ -70,7 +70,7 @@ export default function Navbar() {
             <Link href="/success-story">Success Story</Link>
           </li>
           <li className="mx-1">
-            <Link href="/student-enquiry">Student Enquiry</Link>
+            <Link href="/Admission-Enquiry">Admission Enquiry</Link>
           </li>
           <li className="mx-1">
             <Link href="/contact-us">Contact Us</Link>
