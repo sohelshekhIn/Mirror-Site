@@ -13,5 +13,8 @@ import howusGoals from "./howus-goals.png";
 import howusOlympiad from "./howus-olympiad.png";
 import howusTasklist from "./howus-tasklist.png";
 import testimonial from "./testimonial.jpg";
+import cbseLogo from "./cbseLogo.png"
+import gsebLogo from "./gsebLogo.png"
+import icseLogo from "./isceLogo.png"
 
-export { h1, h2, h3, h4, h5, h6, h7, h8, h9, logo, howusBasics, howusGoals, howusOlympiad, howusTasklist, testimonial };
+export { h1, h2, h3, h4, h5, h6, h7, h8, h9, logo, howusBasics, howusGoals, howusOlympiad, howusTasklist, testimonial, cbseLogo, gsebLogo, icseLogo };
