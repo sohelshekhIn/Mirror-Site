@@ -5,7 +5,7 @@ export default function WhyUs() {
             <div className="bg-primary bg-opacity-80 w-100 p-5 pt-10 lg:p-10">
 
                 <div className="w-full lg:w-3/4 xl:w-2/4 mx-auto lg:ml-10 xl:ml-64 p-5 text-base-100">
-                    <h1 className="font-extrabold text-4xl uppercase mb-5">Why Mirror Intitute</h1>
+                    <h1 className="text-heading">Why Mirror Intitute</h1>
                     <p className="text-lg">mirror institute has been started to render the academic need of the central board students. We are trying to keep this institute upgraded to satisfy the need of the students. Our objective is to realize students their potential within. Our methodology has been motivational and encouraging. We always try to simplify the complicacy of the subject by spurring lateral thinking.
                         <br />
                         <br />

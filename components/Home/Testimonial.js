@@ -11,7 +11,7 @@ export default function Testimonial() {
         carousel.scrollLeft += carousel.offsetWidth;
         if (
           carousel.scrollLeft ===
-          carousel.scrollWidth - carousel.offsetWidth - 1
+          carousel.scrollWidth - carousel.offsetWidth
         ) {
           carousel.scrollLeft = 0;
         }
@@ -31,7 +31,7 @@ export default function Testimonial() {
         id="testimonials"
         className="flex flex-col items-center justify-center mt-24 mb-14"
       >
-        <h2 className="text-center divider text-5xl font-bold text-primary uppercase">
+        <h2 className="text-heading text-center divider text-primary">
           Testimonials
         </h2>
         <p className="text-center">What our students have to say</p>
@@ -63,19 +63,41 @@ export function Slides({
       id={"slide" + currSlide}
       className="carousel-item relative w-full mx-24"
     >
-      <div class="card w-96 bg-base-100 shadow-2xl p-5 m-5 mx-auto">
-        <div class="card-body flex flex-col">
+      <div className="card w-96 bg-base-100 shadow-2xl p-5 m-5 mx-auto">
+        <div className="card-body flex flex-col">
           <div className="flex">
             <span className="w-16">
               <Image className="rounded-full" src={image} />
             </span>
 
             <span className="flex flex-col ml-5">
-              <h2 class="card-title">{name}</h2>
+              <h2 className="card-title">{name}</h2>
               <p>{desc}</p>
             </span>
           </div>
-          <div class="justify-center">
+          <div className="justify-center">
+            <p>
+              <span className="text-neutral mt-3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                eget nisl id libero tincidunt egestas.
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="card w-96 bg-base-100 shadow-2xl p-5 m-5 mx-auto hidden lg:block">
+        <div className="card-body flex flex-col">
+          <div className="flex">
+            <span className="w-16">
+              <Image className="rounded-full" src={image} />
+            </span>
+
+            <span className="flex flex-col ml-5">
+              <h2 className="card-title">{name}</h2>
+              <p>{desc}</p>
+            </span>
+          </div>
+          <div className="justify-center">
             <p>
               <span className="text-neutral mt-3">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
@@ -87,43 +109,19 @@ export function Slides({
           </div>
         </div>
       </div>
-      <div class="card w-96 bg-base-100 shadow-2xl p-5 m-5 mx-auto hidden lg:block">
-        <div class="card-body flex flex-col">
+      <div className="card w-96 bg-base-100 shadow-2xl p-5 m-5 mx-auto hidden xl:block">
+        <div className="card-body flex flex-col">
           <div className="flex">
             <span className="w-16">
               <Image className="rounded-full" src={image} />
             </span>
 
             <span className="flex flex-col ml-5">
-              <h2 class="card-title">{name}</h2>
+              <h2 className="card-title">{name}</h2>
               <p>{desc}</p>
             </span>
           </div>
-          <div class="justify-center">
-            <p>
-              <span className="text-neutral mt-3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-                eget nisl id libero tincidunt egestas. Nulla euismod, urna eu
-                tincidunt consectetur, nisi nisl elementum nisi, euismod
-                consectetur nunc nisl euismod.
-              </span>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="card w-96 bg-base-100 shadow-2xl p-5 m-5 mx-auto hidden xl:block">
-        <div class="card-body flex flex-col">
-          <div className="flex">
-            <span className="w-16">
-              <Image className="rounded-full" src={image} />
-            </span>
-
-            <span className="flex flex-col ml-5">
-              <h2 class="card-title">{name}</h2>
-              <p>{desc}</p>
-            </span>
-          </div>
-          <div class="justify-center">
+          <div className="justify-center">
             <p>
               <span className="text-neutral mt-3">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris

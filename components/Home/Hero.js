@@ -17,25 +17,27 @@ export default function Hero({ slides }) {
     var carouselInterval
     const startInterval = () => {
       carouselInterval = setInterval(() => {
-        const carousel = document.querySelector(".carousel");
+        const carousel = document.querySelector(".hero-carousel");
         carousel.scrollLeft += carousel.offsetWidth;
-        if (carousel.scrollLeft === carousel.scrollWidth - carousel.offsetWidth - 1) {
+        if (carousel.scrollLeft === carousel.scrollWidth - carousel.offsetWidth) {
           carousel.scrollLeft = 0;
         }
       }, 10000);
     }
     window.addEventListener("blur", () => {
       clearInterval(carouselInterval);
+
     });
     window.addEventListener("focus", () => {
       startInterval();
+
     });
     startInterval();
-  });
+  }, []);
   return (
     <div className="hero w-100 min-h-screen bg-base-100">
       <div className="hero-content flex-col lg:flex-row-reverse lg:p-16">
-        <div className="w-full lg:w-2/5 carousel rounded-box">
+        <div className="w-full lg:w-2/5 carousel hero-carousel rounded-box">
           {slidesState}
         </div>
         <div className="w-full lg:w-3/5 lg:-mt-12 p-5">
@@ -67,11 +69,22 @@ export default function Hero({ slides }) {
 const SlideItem = (src, key) => {
   return (
     <div className="carousel-item w-full" key={key}>
-      <Image
-        src={src}
-        className="w-full"
-        alt="Hero Image || mirror instutute"
-      />
+      {/* Single line if else  */}
+      {key == 0 ? (
+        <Image
+          src={src}
+
+          className="w-full"
+          alt="Hero Image || mirror instutute"
+        />
+      ) : (
+        <Image
+          src={src}
+          priority="true"
+          className="w-full"
+          alt="Hero Image || mirror instutute"
+        />
+      )}
     </div>
   )
 }
