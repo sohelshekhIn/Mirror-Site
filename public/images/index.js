@@ -7,6 +7,7 @@ import h6 from "./h6.jpg";
 import h7 from "./h7.jpg";
 import h8 from "./h8.jpg";
 import h9 from "./h9.jpg";
+import h10 from "./h10.png";
 import logo from "./logo.png";
 import howusBasics from "./howus-basics.png"
 import howusGoals from "./howus-goals.png";
@@ -19,7 +20,7 @@ import icseLogo from "./isceLogo.png"
 import upArrrow from "./up-arrow.png"
 
 export {
-    h1, h2, h3, h4, h5, h6, h7, h8, h9,
+    h1, h2, h3, h4, h5, h6, h7, h8, h9, h10,
     logo, howusBasics, howusGoals, howusOlympiad,
     howusTasklist, testimonial, cbseLogo,
     gsebLogo, icseLogo, upArrrow

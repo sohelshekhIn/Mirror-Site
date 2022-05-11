@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
       <div className="p-5 pb-0 backdrop-blur-md fixed w-full z-50">
         <Navbar />
       </div>
-      <div id="head"></div>
+      <div id="top"></div>
       <Component {...pageProps} />
       <Footer />
     </>
