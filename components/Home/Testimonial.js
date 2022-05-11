@@ -10,8 +10,8 @@ export default function Testimonial() {
         const carousel = document.querySelector(".testimonial-carousel");
         carousel.scrollLeft += carousel.offsetWidth;
         if (
-          carousel.scrollLeft ===
-          carousel.scrollWidth - carousel.offsetWidth
+          carousel.scrollLeft >=
+          carousel.scrollWidth - carousel.offsetWidth - 10
         ) {
           carousel.scrollLeft = 0;
         }
@@ -36,7 +36,7 @@ export default function Testimonial() {
         </h2>
         <p className="text-center">What our students have to say</p>
       </div>
-      <div className="carousel testimonial-carousel w-full py-14">
+      <div className="carousel testimonial-carousel w-full py-14 xl:pt-0">
         <Slides currSlide="1" prevSlide="4" nextSlide="2" image={testimonial} />
         <Slides currSlide="2" prevSlide="1" nextSlide="3" image={testimonial} />
         <Slides currSlide="3" prevSlide="2" nextSlide="4" image={testimonial} />
