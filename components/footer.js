@@ -20,7 +20,7 @@ export function Footer() {
     <>
       <footer className="footer p-10 bg-secondary text-base-100">
         <div id="stt" className="tooltip btn hover:bg-base-100 outline-none border-0 transform hover:scale-105 bg-base-100 fixed right-10 bottom-10 rounded-sm shadow-xl z-40 hidden" data-tip="Scroll To Top">
-          <a href="#head" className="flex w-100 h-100">
+          <a href="#top" className="flex w-100 h-100">
             <span className="transfrom translate-y-2">
               <Image src={upArrrow} alt="Scroll To Top" />
             </span>
