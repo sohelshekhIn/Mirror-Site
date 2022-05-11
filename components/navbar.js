@@ -55,7 +55,7 @@ export default function Navbar() {
           </ul>
         </div>
         <a className="btn btn-link w-28 p-1 my-2 lg:w-32 lg:mx-2">
-          <Image src={logo} alt="Logo" />
+          <Image src={logo} priority="true" alt="Mirror Institute Nadiad - Best Tution Classes in Nadiad, Mirror Institute Logo" />
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">

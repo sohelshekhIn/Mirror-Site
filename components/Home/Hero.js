@@ -9,8 +9,6 @@ export default function Hero({ slides }) {
       slideElems.push(SlideItem(slide, slide.src));
     })
     setSlidesState(slideElems)
-
-
   }, [])
 
   useEffect(() => {
@@ -19,21 +17,22 @@ export default function Hero({ slides }) {
       carouselInterval = setInterval(() => {
         const carousel = document.querySelector(".hero-carousel");
         carousel.scrollLeft += carousel.offsetWidth;
-        if (carousel.scrollLeft === carousel.scrollWidth - carousel.offsetWidth) {
+        if (carousel.scrollLeft >= carousel.scrollWidth - carousel.offsetWidth - 10) {
           carousel.scrollLeft = 0;
         }
       }, 10000);
     }
     window.addEventListener("blur", () => {
       clearInterval(carouselInterval);
-
     });
     window.addEventListener("focus", () => {
       startInterval();
-
     });
     startInterval();
-  }, []);
+
+  });
+
+
   return (
     <div className="hero w-100 min-h-screen bg-base-100">
       <div className="hero-content flex-col lg:flex-row-reverse lg:p-16">
