@@ -10,6 +10,10 @@
   @apply font-extrabold text-4xl uppercase mb-5;
 }
 
+.page-layout {
+  @apply p-5 pl-3 pt-16 lg:p-5 w-full;
+}
+
 html {
   scroll-behavior: smooth !important;
 }

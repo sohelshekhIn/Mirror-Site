@@ -54,9 +54,15 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-        <a className="btn btn-link w-28 p-1 my-2 lg:w-32 lg:mx-2">
-          <Image src={logo} priority="true" alt="Mirror Institute Nadiad - Best Tution Classes in Nadiad, Mirror Institute Logo" />
-        </a>
+        <Link href="/">
+          <a className="btn btn-link w-28 p-1 my-2 lg:w-32 lg:mx-2">
+            <Image
+              src={logo}
+              priority="true"
+              alt="Mirror Institute Nadiad - Best Tution Classes in Nadiad, Mirror Institute Logo"
+            />
+          </a>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
