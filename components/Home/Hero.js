@@ -35,13 +35,13 @@ export default function Hero({ slides }) {
   });
 
   return (
-    <div className="hero w-100 min-h-screen bg-base-100">
+    <div className="hero w-100 min-h-screen bg-base-100 mx-auto">
       <div className="hero-content flex-col lg:flex-row-reverse lg:p-16">
-        <div className="w-full lg:w-2/5 carousel hero-carousel rounded-box">
+        <div className="w-full lg:w-2/5 carousel hero-carousel rounded-box hero-circle">
           {slidesState}
         </div>
         <div className="w-full lg:w-3/5 lg:-mt-12 p-5">
-          <span className="text-5xl font-bold flex flex-col">
+          <span className="text-5xl font-bold flex flex-col hero-zigzag">
             <p className="text-xl lg:text-3xl">Welcome to</p>
             <span className="flex flex-col text-primary text-[1.2em] lg:text-[2em]  select-none">
               <span className="flex mr-[1rem] lg:m-0">

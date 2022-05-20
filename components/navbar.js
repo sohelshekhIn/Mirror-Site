@@ -1,8 +1,15 @@
 import logo from "../public/images/logo.png";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 
 export default function Navbar() {
+  useEffect(() => {
+    document.querySelector(".dropdown-content").onclick = function (e) {
+      document.activeElement.blur();
+    };
+  });
+
   return (
     <div className="navbar rounded-xl bg-primary text-base-100 px-5">
       <div className="navbar-start">

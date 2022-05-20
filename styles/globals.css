@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 .btn {
   @apply rounded-md;
 }
@@ -11,7 +12,25 @@
 }
 
 .page-layout {
-  @apply p-5 pl-3 pt-16 lg:p-5 w-full;
+  @apply p-5 pt-16 lg:p-5 w-full;
+}
+
+.hero-circle {
+  @apply after:bg-circle after:absolute after:lg:w-40 after:lg:h-40 after:-z-10 after:bg-cover after:bg-center after:bg-no-repeat after:top-52 after:2xl:top-44 after:2xl:left-[75%] after:xl:left-[85%] after:lg:left-[85%] after:lg:top-52 after:left-[70%] after:w-10;
+}
+
+.whyus-triangle {
+  @apply mt-24 z-20 lg:mt-0 after:bg-triangle after:absolute after:w-28 after:h-28 
+  after:top-[105%] after:right-5 after:lg:top-[85%] after:z-10 after:lg:left-5 after:lg:scale-x-[-1] after:scale-y-[-1]  after:bg-no-repeat after:bg-center after:bg-cover;
+}
+
+.hero-zigzag {
+  @apply after:hidden after:lg:block after:absolute after:bg-zigzag after:top-[70%] after:left-[55%] after:w-24 after:h-6 after:bg-cover after:bg-no-repeat after:bg-center
+  before:hidden before:lg:block before:absolute before:bg-zigzag before:top-[73%] before:left-[55%] before:w-24 before:h-6 before:bg-cover before:bg-no-repeat before:bg-center;
+}
+.aboutus-polkadots2 {
+  @apply after:bg-polkadots2 after:absolute after:w-20 after:h-10
+  after:top-[50%] after:right-0 after:lg:top-[55%] after:z-10 after:rotate-90 after:lg:right-5 after:bg-no-repeat after:bg-left-bottom after:bg-cover;
 }
 
 html {
@@ -22,12 +41,6 @@ html {
 }
 
 .ownerImg {
-  /* position: absolute;
-  right: 1.2em;
-  bottom: -24.3em;
-  width: 273px;
-  height: 406px;
-  background-repeat: no-repeat; */
   background-image: url("../public/images/ronak.png");
 }
 
