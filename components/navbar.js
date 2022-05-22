@@ -11,7 +11,7 @@ export default function Navbar() {
   });
 
   return (
-    <div className="navbar rounded-xl bg-primary text-base-100 px-5">
+    <div className="navbar rounded-xl bg-primary text-base-100 px-5 3xl:px-14">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -91,7 +91,7 @@ export default function Navbar() {
         </ul>
       </div>
       <div className="navbar-end">
-        <button className="btn btn-ghost">
+        <button className="btn btn-ghost text-accent">
           <Link href="/login">Login</Link>
         </button>
       </div>

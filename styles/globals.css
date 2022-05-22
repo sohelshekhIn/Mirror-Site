@@ -37,6 +37,10 @@
   after:top-[60%] after:right-0 after:lg:top-[55%] after:z-10 after:rotate-90 after:lg:right-5 after:bg-no-repeat after:bg-left-bottom after:bg-cover;
 }
 
+.underline {
+  @apply bg-accent h-1;
+}
+
 .debug {
   @apply sm:bg-orange-500 md:bg-cyan-400 lg:bg-red-500 xl:bg-blue-500 2xl:bg-gray-500 3xl:bg-indigo-700;
 }

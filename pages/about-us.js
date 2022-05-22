@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { aboutImageRight, aboutImageBottom } from "../public/images/";
 import { useEffect, useState, useCallback } from "react";
+import { aboutImageBottom, aboutImageRight } from "../public/images";
 
 export default function AboutUs() {
   const useMediaQuery = (width) => {
@@ -31,9 +31,8 @@ export default function AboutUs() {
   return (
     <>
       <div className="page-layout">
-        <div className="flex flex-row min-h-100 my-16 lg:my-32 flex-wrap">
+        <div className="flex flex-row my-16 lg:my-32 flex-wrap">
           <div className="w-ful mx-auto xl:mx-0 px-0 md:px-28 lg:px-0 lg:w-6/12  xl:pl-[10%] 2xl:pl-[15%] 3xl:pl-[20%]">
-            {/* if targetReached is true show aboutImageRIght or else show aboutImageBottom */}
             {isBreakpoint ? (
               <Image src={aboutImageBottom} alt="about-us-image" />
             ) : (
@@ -44,7 +43,7 @@ export default function AboutUs() {
             <h1 className="text-heading text-5xl text-primary mb-0">
               About Us
             </h1>
-            <span className="bg-accent w-64 h-1 lg:-mt-5 xl:mt-0"></span>
+            <span className="underline w-64  lg:-mt-5 xl:mt-0"></span>
             <p className="lg:py-2 xl:py-10 mt-10 lg:mt-0 w-full lg:w-9/12 2xl:w-8/12 text-lg">
               mirror institute has been started to render the academic need of
               the central board students. We are trying to keep this institute
