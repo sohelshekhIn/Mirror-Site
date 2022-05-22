@@ -1,22 +1,51 @@
 import Image from "next/image";
-import { h3 } from "../public/images/";
+import { aboutImageRight, aboutImageBottom } from "../public/images/";
+import { useEffect, useState, useCallback } from "react";
 
 export default function AboutUs() {
+  const useMediaQuery = (width) => {
+    const [targetReached, setTargetReached] = useState(false);
+
+    const updateTarget = useCallback((e) => {
+      if (e.matches) {
+        setTargetReached(true);
+      } else {
+        setTargetReached(false);
+      }
+    }, []);
+
+    useEffect(() => {
+      const media = window.matchMedia(`(max-width: ${width}px)`);
+      media.addEventListener("change", updateTarget);
+      // Check on mount (callback is not called until a change occurs)
+      if (media.matches) {
+        setTargetReached(true);
+      }
+      return () => media.removeEventListener("change", updateTarget);
+    }, []);
+
+    return targetReached;
+  };
+
+  const isBreakpoint = useMediaQuery("1024");
   return (
     <>
       <div className="page-layout">
-        <div className="flex flex-row min-h-100 mt-28 flex-wrap">
-          <div className="w-10/12 px-5 md:px-28 lg:w-1/2">
-            <Image
-              src={h3}
-              alt="h3"
-              className="rounded-lg lg:rounded-tr-full lg:rounded-br-none lg:rounded-bl-none lg:rounded-tl-none"
-            />
+        <div className="flex flex-row min-h-100 my-16 lg:my-32 flex-wrap">
+          <div className="w-ful mx-auto xl:mx-0 px-0 md:px-28 lg:px-0 lg:w-6/12  xl:pl-[10%] 2xl:pl-[15%] 3xl:pl-[20%]">
+            {/* if targetReached is true show aboutImageRIght or else show aboutImageBottom */}
+            {isBreakpoint ? (
+              <Image src={aboutImageBottom} alt="about-us-image" />
+            ) : (
+              <Image src={aboutImageRight} alt="about-us-image" />
+            )}
           </div>
-          <div className="lg:w-1/2 flex flex-col px-5 md:px-28 lg:pl-24 pt-20 aboutus-polkadots2">
-            <h1 className="text-heading text-5xl text-primary">About Us</h1>
-            <span className="bg-accent w-64 h-1"></span>
-            <p className="lg:py-14 mt-10 lg:mt-0 w-full lg:w-9/12 text-lg">
+          <div className="flex flex-col lg:w-6/12 2xl:w-1/2 px-5 md:px-28 lg:px-0 pt-0 -mt-8 lg:mt-0 xl:mt-5">
+            <h1 className="text-heading text-5xl text-primary mb-0">
+              About Us
+            </h1>
+            <span className="bg-accent w-64 h-1 lg:-mt-5 xl:mt-0"></span>
+            <p className="lg:py-2 xl:py-10 mt-10 lg:mt-0 w-full lg:w-9/12 2xl:w-8/12 text-lg">
               mirror institute has been started to render the academic need of
               the central board students. We are trying to keep this institute
               upgraded to satisfy the need of the students. Our objective is to

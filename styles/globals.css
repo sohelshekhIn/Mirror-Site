@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .btn {
   @apply rounded-md;
 }
@@ -28,9 +32,13 @@
   @apply after:hidden after:lg:block after:absolute after:bg-zigzag after:top-[70%] after:left-[55%] after:w-24 after:h-6 after:bg-cover after:bg-no-repeat after:bg-center
   before:hidden before:lg:block before:absolute before:bg-zigzag before:top-[73%] before:left-[55%] before:w-24 before:h-6 before:bg-cover before:bg-no-repeat before:bg-center;
 }
-.aboutus-polkadots2 {
+.polkadots2 {
   @apply after:bg-polkadots2 after:absolute after:w-20 after:h-10
-  after:top-[50%] after:right-0 after:lg:top-[55%] after:z-10 after:rotate-90 after:lg:right-5 after:bg-no-repeat after:bg-left-bottom after:bg-cover;
+  after:top-[60%] after:right-0 after:lg:top-[55%] after:z-10 after:rotate-90 after:lg:right-5 after:bg-no-repeat after:bg-left-bottom after:bg-cover;
+}
+
+.debug {
+  @apply sm:bg-orange-500 md:bg-cyan-400 lg:bg-red-500 xl:bg-blue-500 2xl:bg-gray-500 3xl:bg-indigo-700;
 }
 
 html {
@@ -43,7 +51,3 @@ html {
 .ownerImg {
   background-image: url("../public/images/ronak.png");
 }
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;

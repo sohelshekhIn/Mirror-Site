@@ -1,8 +1,11 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
 export default function Hero({ slides }) {
+  const router = useRouter();
   const [slidesState, setSlidesState] = useState([]);
+
   useEffect(() => {
     let slideElems = [];
     slides.forEach((slide) => {
@@ -31,8 +34,20 @@ export default function Hero({ slides }) {
     window.addEventListener("focus", () => {
       startInterval();
     });
+    router.events.on("routeChangeStart", (url, { shallow }) => {
+      clearInterval(carouselInterval);
+      console.log("Carousel stopped");
+    });
+
     startInterval();
   });
+
+  // useEffect(() => {
+  //   router.events.on("routeChangeStart", (url, { shallow }) => {
+  //     // clearInterval(carouselInterval);
+  //     console.log("Carousel stopped");
+  //   });
+  // }, []);
 
   return (
     <div className="hero w-100 min-h-screen bg-base-100 mx-auto">

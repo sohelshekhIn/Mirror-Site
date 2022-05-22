@@ -1,8 +1,10 @@
 import Image from "next/image";
 import { testimonial } from "../../public/images";
 import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 export default function Testimonial() {
+  const router = useRouter();
   useEffect(() => {
     var testimonialInterval;
     const startInterval = () => {
@@ -23,6 +25,11 @@ export default function Testimonial() {
     window.addEventListener("focus", () => {
       startInterval();
     });
+    router.events.on("routeChangeStart", (url, { shallow }) => {
+      clearInterval(testimonialInterval);
+      console.log("Testimonial stopped");
+    });
+
     startInterval();
   });
   return (
