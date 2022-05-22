@@ -50,7 +50,7 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="my-1">
-              <Link href="/Admission-Enquiry">
+              <Link href="/admission-enquiry">
                 <a className="w-full p-4">Admission Enquiry</a>
               </Link>
             </li>
@@ -83,7 +83,7 @@ export default function Navbar() {
             <Link href="/success-story">Success Story</Link>
           </li>
           <li className="mx-1">
-            <Link href="/Admission-Enquiry">Admission Enquiry</Link>
+            <Link href="/admission-enquiry">Admission Enquiry</Link>
           </li>
           <li className="mx-1">
             <Link href="/contact-us">Contact Us</Link>

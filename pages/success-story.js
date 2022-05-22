@@ -26,20 +26,20 @@ export default function SucccesStory() {
 
 export function Card() {
   return (
-    <div class="card w-96 mx-auto my-5 bg-base-100 duration-200 hover:shadow-xl">
+    <div className="card w-96 mx-auto my-5 bg-base-100 duration-200 hover:shadow-xl">
       <figure>
         <Image src={h10} alt="Shoes" />
       </figure>
-      <div class="card-body min-h-16">
-        <h2 class="card-title">Anvi Parekh</h2>
+      <div className="card-body min-h-16">
+        <h2 className="card-title">Anvi Parekh</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur
           amet repellendus voluptatum ipsa, deleniti magnam! Blanditiis
           repudiandae facilis molestias sequi illum deleniti unde repellendus.
           Inventore!
         </p>
-        <div class="card-actions justify-end">
-          <button class="btn btn-primary">Read More</button>
+        <div className="card-actions justify-end">
+          <button className="btn btn-primary">Read More</button>
         </div>
       </div>
     </div>
