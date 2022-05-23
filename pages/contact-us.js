@@ -2,7 +2,7 @@ export default function ContactUs() {
   return (
     <div className="page-layout">
       <div className="flex flex-col md:flex-row my-16 lg:my-32">
-        <div className="w-full md:w-1/2 p-5 md:p-10 ">
+        <div className="w-full md:w-1/2 3xl:w-8/12 p-5 md:p-10 3xl:pl-32">
           <div class="mapouter">
             <div class="gmap_canvas">
               <iframe
