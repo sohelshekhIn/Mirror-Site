@@ -26,6 +26,15 @@ module.exports = {
       fontFamily: {
         sans: ["Poppins", "san-serif"],
       },
+      animation: {
+        'pulse-fast': 'pulse 2s linear infinite',
+      },
+      keyframes: {
+        pulse: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.2' },
+        }
+      }
     },
   },
   // daisyUI config (optional)

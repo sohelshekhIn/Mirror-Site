@@ -20,7 +20,7 @@ import icseLogo from "./isceLogo.png";
 import upArrrow from "./up-arrow.png";
 import aboutImageRight from "./a3r.png";
 import aboutImageBottom from "./a3b.png";
-
+import map from "./map.png";
 export {
   h1,
   h2,
@@ -44,4 +44,5 @@ export {
   upArrrow,
   aboutImageRight,
   aboutImageBottom,
+  map
 };

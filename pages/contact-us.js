@@ -1,20 +1,50 @@
+import Image from "next/image"
+import { useEffect } from "react";
+import { map } from "../public/images/"
+
+
+
 export default function ContactUs() {
+  useEffect(() => {
+    let gMaps = document.getElementById("gmap_canvas");
+    let mapSkeleton = document.getElementById("map-skeleton");
+    // Show mapSkeleton till the iframe loads
+    mapSkeleton.style.display = "block";
+    gMaps.style.display = "none";
+    gMaps.style.opacity = "0"
+    gMaps.style.transitionDuration = "1s";
+    // Hide mapSkeleton when iframe loads
+    gMaps.onload = () => {
+      console.log("Loadding ");
+      mapSkeleton.style.display = "none";
+      gMaps.style.display = "block";
+      gMaps.style.opacity = "1"
+    };
+  }, []);
+
   return (
     <div className="page-layout">
       <div className="flex flex-col md:flex-row my-16 lg:my-32">
         <div className="w-full md:w-1/2 3xl:w-8/12 p-5 md:p-10 3xl:pl-32">
-          <div class="mapouter">
-            <div class="gmap_canvas">
+          <div className="mapouter">
+            <div className="gmap_canvas">
               <iframe
                 width="100%"
                 className="h-96"
                 id="gmap_canvas"
+                loading="lazy"
                 src="https://maps.google.com/maps?q=Mirror%20Institue%20Nadiad&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                frameborder="0"
+                framebBorder="0"
                 scrolling="no"
-                marginheight="0"
-                marginwidth="0"
+                marginHeight="0"
+                marginWidth="0"
               ></iframe>
+              <div id="map-skeleton" className="w-full h-96 border-2 rounded-md mx-auto">
+                <div className="flex animate-pulse-fast flex-col items-center h-full justify-center space-x-5">
+                  <Image priority src={map} alt="Map Loading" />
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -59,6 +89,7 @@ export default function ContactUs() {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
+
