@@ -9,13 +9,19 @@ export default function Testimonial() {
     var testimonialInterval;
     const startInterval = () => {
       testimonialInterval = setInterval(() => {
-        const carousel = document.querySelector(".testimonial-carousel");
-        carousel.scrollLeft += carousel.offsetWidth;
-        if (
-          carousel.scrollLeft >=
-          carousel.scrollWidth - carousel.offsetWidth - 10
-        ) {
-          carousel.scrollLeft = 0;
+        const testimonialCarousel = document.querySelector(
+          ".testimonial-carousel"
+        );
+        if (testimonialCarousel != null) {
+          testimonialCarousel.scrollLeft += testimonialCarousel.offsetWidth;
+          if (
+            testimonialCarousel.scrollLeft >=
+            testimonialCarousel.scrollWidth -
+              testimonialCarousel.offsetWidth -
+              10
+          ) {
+            testimonialCarousel.scrollLeft = 0;
+          }
         }
       }, 10000);
     };

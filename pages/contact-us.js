@@ -1,8 +1,6 @@
-import Image from "next/image"
+import Image from "next/image";
 import { useEffect } from "react";
-import { map } from "../public/images/"
-
-
+import { map } from "../public/images/";
 
 export default function ContactUs() {
   useEffect(() => {
@@ -11,14 +9,14 @@ export default function ContactUs() {
     // Show mapSkeleton till the iframe loads
     mapSkeleton.style.display = "block";
     gMaps.style.display = "none";
-    gMaps.style.opacity = "0"
+    gMaps.style.opacity = "0";
     gMaps.style.transitionDuration = "1s";
     // Hide mapSkeleton when iframe loads
     gMaps.onload = () => {
       console.log("Loadding ");
       mapSkeleton.style.display = "none";
       gMaps.style.display = "block";
-      gMaps.style.opacity = "1"
+      gMaps.style.opacity = "1";
     };
   }, []);
 
@@ -34,17 +32,19 @@ export default function ContactUs() {
                 id="gmap_canvas"
                 loading="lazy"
                 src="https://maps.google.com/maps?q=Mirror%20Institue%20Nadiad&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                framebBorder="0"
+                frameBorder="0"
                 scrolling="no"
                 marginHeight="0"
                 marginWidth="0"
               ></iframe>
-              <div id="map-skeleton" className="w-full h-96 border-2 rounded-md mx-auto">
+              <div
+                id="map-skeleton"
+                className="w-full h-96 border-2 rounded-md mx-auto"
+              >
                 <div className="flex animate-pulse-fast flex-col items-center h-full justify-center space-x-5">
                   <Image priority src={map} alt="Map Loading" />
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -89,7 +89,6 @@ export default function ContactUs() {
           </div>
         </div>
       </div>
-    </div >
+    </div>
   );
 }
-

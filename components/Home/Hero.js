@@ -19,12 +19,14 @@ export default function Hero({ slides }) {
     const startInterval = () => {
       carouselInterval = setInterval(() => {
         const carousel = document.querySelector(".hero-carousel");
-        carousel.scrollLeft += carousel.offsetWidth;
-        if (
-          carousel.scrollLeft >=
-          carousel.scrollWidth - carousel.offsetWidth - 10
-        ) {
-          carousel.scrollLeft = 0;
+        if (carousel != null) {
+          carousel.scrollLeft += carousel.offsetWidth;
+          if (
+            carousel.scrollLeft >=
+            carousel.scrollWidth - carousel.offsetWidth - 10
+          ) {
+            carousel.scrollLeft = 0;
+          }
         }
       }, 10000);
     };
@@ -34,20 +36,12 @@ export default function Hero({ slides }) {
     window.addEventListener("focus", () => {
       startInterval();
     });
-    router.events.on("routeChangeStart", (url, { shallow }) => {
+    router.events.on("routeChangeStart", () => {
       clearInterval(carouselInterval);
-      console.log("Carousel stopped");
     });
 
     startInterval();
-  });
-
-  // useEffect(() => {
-  //   router.events.on("routeChangeStart", (url, { shallow }) => {
-  //     // clearInterval(carouselInterval);
-  //     console.log("Carousel stopped");
-  //   });
-  // }, []);
+  }, []);
 
   return (
     <div className="hero w-100 min-h-screen bg-base-100 mx-auto">
