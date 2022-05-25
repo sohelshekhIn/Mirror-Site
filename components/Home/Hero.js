@@ -51,7 +51,7 @@ export default function Hero({ slides }) {
         </div>
         <div className="w-full lg:w-3/5 lg:-mt-12 p-5">
           <span className="text-5xl font-bold flex flex-col hero-zigzag">
-            <p className="text-xl lg:text-3xl">Welcome to</p>
+            <p className="text-xl lg:text-3xl text-accent">Welcome to</p>
             <span className="flex flex-col text-primary text-[1.2em] lg:text-[2em]  select-none">
               <span className="flex mr-[1rem] lg:m-0">
                 mir

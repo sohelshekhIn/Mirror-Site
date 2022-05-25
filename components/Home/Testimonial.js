@@ -33,7 +33,6 @@ export default function Testimonial() {
     });
     router.events.on("routeChangeStart", (url, { shallow }) => {
       clearInterval(testimonialInterval);
-      console.log("Testimonial stopped");
     });
 
     startInterval();
