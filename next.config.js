@@ -2,8 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['api.lorem.space'],
+    domains: ["localhost"],
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

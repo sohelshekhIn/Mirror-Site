@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import { design_triangle } from "../../public/images";
 
 export default function Hero({ slides }) {
   const router = useRouter();
@@ -42,10 +43,9 @@ export default function Hero({ slides }) {
 
     startInterval();
   }, []);
-
   return (
-    <div className="hero w-100 min-h-screen bg-base-100 mx-auto">
-      <div className="hero-content flex-col lg:flex-row-reverse lg:p-16">
+    <div className="hero w-100 min-h-screen bg-base-100 mx-auto flex flex-col">
+      <div className="hero-content flex-col lg:flex-row-reverse mt-16 lg:mt-0 lg:p-16 lg:pb-0 h-100 my-auto">
         <div className="w-full lg:w-2/5 carousel hero-carousel rounded-box hero-circle">
           {slidesState}
         </div>
@@ -71,6 +71,14 @@ export default function Hero({ slides }) {
           </h5>
           <button className="btn btn-primary">Enquire Now</button>
         </div>
+      </div>
+      <div className="w-full mb-3 lg:mb-5 flex flex-row-reverse lg:flex-row">
+        <span className="">
+          <Image
+            className="lg:scale-x-[-1] scale-y-[-1]"
+            src={design_triangle}
+          />
+        </span>
       </div>
     </div>
   );

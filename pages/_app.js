@@ -2,8 +2,9 @@ import { Footer } from "../components/footer";
 import Navbar from "../components/navbar";
 import "../styles/globals.css";
 import Meta from "../components/utilities/meta-seo";
+import { GetRequest } from "../components/utilities/FetchData";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, props }) {
   return (
     <>
       <Meta
@@ -16,13 +17,29 @@ of the art education."
         favicon="/favicon.ico"
       />
       <div className="p-5 pb-0 backdrop-blur-md fixed w-full z-50">
-        <Navbar />
+        <Navbar
+          navLinks={props.data.NavLinks}
+          navLoginButton={props.data.NavLoginButton}
+        />
       </div>
       <div id="top"></div>
       <Component {...pageProps} />
-      <Footer />
+      <Footer
+        Footer={props.data.Footer}
+        FooterColumns={props.data.FooterColumns}
+        FooterCredits={props.data.FooterCredits}
+      />
     </>
   );
 }
 
 export default MyApp;
+
+MyApp.getInitialProps = async (ctx) => {
+  let data = await GetRequest("/global/layout");
+  return {
+    props: {
+      data,
+    },
+  };
+};
