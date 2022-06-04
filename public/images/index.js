@@ -22,6 +22,7 @@ import aboutImageRight from "./a3r.png";
 import aboutImageBottom from "./a3b.png";
 import map from "./map.png";
 import design_triangle from "./design-elements/corner.svg";
+import success from "./design-elements/success.svg";
 
 export {
   h1,
@@ -48,4 +49,5 @@ export {
   aboutImageBottom,
   map,
   design_triangle,
+  success,
 };

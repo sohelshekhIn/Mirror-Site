@@ -16,7 +16,7 @@
 }
 
 .page-layout {
-  @apply p-5 pt-16 lg:p-5 w-full;
+  @apply p-5 pt-0 lg:pt-14 lg:p-5 w-full;
 }
 
 .hero-circle {
@@ -45,17 +45,14 @@
   @apply xs:bg-rose-900 sm:bg-orange-500 md:bg-cyan-400 lg:bg-red-500 xl:bg-blue-500 2xl:bg-gray-500 3xl:bg-indigo-700;
 }
 
-* {
-  transition: all 0.3s ease;
-  -webkit-transition: all;
-  -moz-transition: all;
-  -ms-transition: all;
-  -o-transition: all;
-}
-
 html {
   scroll-behavior: smooth !important;
 }
+
+* {
+  @apply transition-all duration-1000;
+}
+
 .whyus {
   background-image: url("../public/images/h9.jpg");
 }

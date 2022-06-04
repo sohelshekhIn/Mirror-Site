@@ -8,7 +8,7 @@ import { h1, h2, h3, h4, h5, h6, h7, h8, h9, h10 } from "../public/images/";
 export default function Home() {
   return (
     <>
-      <div className="page-layout">
+      <div className="page-layout mt-28">
         <Hero slides={[h1, h2, h3, h4, h5, h6, h7, h8, h9, h10]} />
         <WhyUs />
         <HowUs />

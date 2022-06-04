@@ -45,7 +45,7 @@ export default function Hero({ slides }) {
   }, []);
   return (
     <div className="hero w-100 min-h-screen bg-base-100 mx-auto flex flex-col">
-      <div className="hero-content flex-col lg:flex-row-reverse mt-16 lg:mt-0 lg:p-16 lg:pb-0 h-100 my-auto">
+      <div className="hero-content flex-col lg:flex-row-reverse lg:mt-0 lg:p-16 lg:pb-0 h-100 my-auto">
         <div className="w-full lg:w-2/5 carousel hero-carousel rounded-box hero-circle">
           {slidesState}
         </div>

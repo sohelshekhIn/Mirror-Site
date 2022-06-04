@@ -16,14 +16,16 @@ as well as students to give them the state
 of the art education."
         favicon="/favicon.ico"
       />
-      <div className="p-5 pb-0 backdrop-blur-md fixed w-full z-50">
+      <div className="p-5 pb-0 backdrop-blur-md fixed w-full z-50 top-0">
         <Navbar
           navLinks={props.data.NavLinks}
           navLoginButton={props.data.NavLoginButton}
         />
       </div>
       <div id="top"></div>
-      <Component {...pageProps} />
+      <div className="mt-36 lg:mt-0">
+        <Component {...pageProps} />
+      </div>
       <Footer
         Footer={props.data.Footer}
         FooterColumns={props.data.FooterColumns}

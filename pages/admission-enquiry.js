@@ -1,4 +1,4 @@
-import successImg from "../public/images/design-elements/success.svg";
+import success from "../public/images";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -74,7 +74,7 @@ export default function AdmissionEnquiry() {
 export function SubmittedUI() {
   return (
     <div className="container w-100 md:w-1/2 md:mt-14 p-5 md:p-16">
-      <Image src={successImg} alt="Successfully submitted" className="w-1/12" />
+      <Image src={success} alt="Successfully submitted" className="w-1/12" />
       <div className="text-center mt-4">
         <h1 className="text-2xl font-semibold">
           Your application has been submitted successfully.
