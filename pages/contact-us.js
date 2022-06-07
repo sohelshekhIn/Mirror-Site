@@ -13,7 +13,6 @@ export default function ContactUs() {
     gMaps.style.transitionDuration = "1s";
     // Hide mapSkeleton when iframe loads
     gMaps.onload = () => {
-      console.log("Loadding ");
       mapSkeleton.style.display = "none";
       gMaps.style.display = "block";
       gMaps.style.opacity = "1";

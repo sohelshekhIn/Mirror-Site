@@ -29,8 +29,8 @@
 }
 
 .hero-zigzag {
-  @apply after:hidden after:lg:block after:absolute after:bg-zigzag after:top-[40%] after:left-[55%] after:w-24 after:h-6 after:bg-cover after:bg-no-repeat after:bg-center
-  before:hidden before:lg:block before:absolute before:bg-zigzag before:top-[43%] before:left-[55%] before:w-24 before:h-6 before:bg-cover before:bg-no-repeat before:bg-center;
+  @apply after:hidden after:lg:block after:absolute after:bg-zigzag after:top-[60%] after:left-[55%] after:w-24 after:h-6 after:bg-cover after:bg-no-repeat after:bg-center
+  before:hidden before:lg:block before:absolute before:bg-zigzag before:top-[63%] before:left-[55%] before:w-24 before:h-6 before:bg-cover before:bg-no-repeat before:bg-center;
 }
 .polkadots2 {
   @apply after:bg-polkadots2 after:absolute after:w-20 after:h-10

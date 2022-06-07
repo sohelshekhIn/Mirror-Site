@@ -104,10 +104,6 @@ export function EnquiryForm({ formState }) {
       ...formData,
       [e.target.name]: e.target.value,
     });
-    console.log({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
   };
 
   const handleFormSubmission = (e) => {
