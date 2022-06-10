@@ -31,7 +31,7 @@ export function Card() {
         <Image src={h10} alt="Shoes" />
       </figure>
       <div className="card-body min-h-16">
-        <h2 className="card-title">Anvi Parekh</h2>
+        <h2 className="card-title">Anvi Talati</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur
           amet repellendus voluptatum ipsa, deleniti magnam! Blanditiis

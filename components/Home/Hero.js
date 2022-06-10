@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { design_triangle } from "../../public/images";
+import Link from "next/link"
 
 export default function Hero({ slides }) {
   const router = useRouter();
@@ -69,7 +70,9 @@ export default function Hero({ slides }) {
             (16+ Years of Experience in Teaching). <br />
             CBSE, ICSE, GSEB, JEE, AIPMT, GUJCET
           </h5>
-          <button className="btn btn-primary">Enquire Now</button>
+          <Link href="/admission-enquiry">
+            <a className="btn btn-primary">Enquire Now</a>
+          </Link>
         </div>
       </div>
       <div className="w-full mb-3 lg:mb-5 flex flex-row-reverse lg:flex-row">
